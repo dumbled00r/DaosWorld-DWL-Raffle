@@ -13,12 +13,12 @@ DUNE_API_KEY = os.environ["DUNE_KEY"]
 
 dune = DuneClient(api_key=DUNE_API_KEY)
 
-QUERY_ID = 4530579  # query id for getting burners https://dune.com/queries/4518440
+QUERY_ID = 4530579  # query id for getting burners https://dune.com/queries/4530579
 
 
-block_number = 26423963  # modify this to snapshot at a specific block number
-burn_address = "0xDeAd000000000000000000000000000000000007"
-token_address = "0x41F86A22C05500Cb62DDC82B77C01C7c5912FA37"  # $DWL
+block_number = 27372303  # modify this to snapshot at a specific block number
+burn_address = "0xDead000000000000000000000000000000000009"
+token_address = "0x41f86a22c05500cb62ddc82b77c01c7c5912fa37"  # $DWL
 
 
 def getBurners():
