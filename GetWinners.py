@@ -32,8 +32,9 @@ def raffle_for_burners(snapshot_file="DWL_Burners_snapshot.csv"):
     guaranteed_winners = df[df["total_burned_dwl"] >= 1e6]["sender_address"].tolist()
     # get non-guaranteed list // those who burned less than 1M $DWL
     raffle_pool = df[df["total_burned_dwl"] < 1e6]
-    total_num_winners = int(sum(df["total_burned_dwl"]) / Decimal("1e6"))
-
+    total_num_winners = math.floor(sum(df["total_burned_dwl"]) / Decimal("1e6"))
+    print(sum(df["total_burned_dwl"]))
+    print(total_num_winners)
     weights = raffle_pool["total_burned_dwl"]
     # normalize weights
     weights = weights / weights.sum()
